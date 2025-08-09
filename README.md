@@ -1,74 +1,97 @@
 # 🏺 Historical Artifacts Tracker
 
-A modern full-stack application to **track, add, and interact with historical artifacts**. This platform allows users to explore, contribute, and manage their own collection of artifacts with a clean, responsive UI.
+## 🔎 Project Overview
+
+> A responsive full-stack web application that allows users to submit, browse, and interact with historical artifacts. The platform supports user authentication, personalized dashboards, and an interactive like system to engage artifact enthusiasts.
 
 ---
 
-## ✨ Features
+## 📸 Screenshot
 
-### 🏠 Home Page
-- A stylish **landing page** with:
-  - **Slider/banner**
-  - Featured **artifact cards**
-  - Informative sections
-  - **Responsive navbar** and footer
-
-### 📜 All Artifacts Page
-- View a **collection of all artifacts** submitted by users
-- Logged-in users can view artifacts added by themselves and others
-
-### ➕ Add Artifact
-- Protected route with a **form to submit a new artifact**
-- Inputs include artifact name, image, description, and more
-- On submission:
-  - Artifact is added to **All Artifacts**
-  - Also shown under **My Artifacts**
-
-### 👤 User Dashboard
-- Accessible via clicking the user **avatar/profile icon**
-- Dropdown includes:
-  - **User name**
-  - **My Artifacts** → Artifacts created by the user
-  - **Liked Artifacts** → Artifacts the user has liked
-
-### ❤️ Like System
-- Users can **like any artifact**
-- Liked items are saved and shown in the **Liked Artifacts** page
-- Re-clicking unlikes the item
-
-### 🔐 Authentication
-- Firebase-based **Login** and **Register** pages
-- Protected routes using Firebase ID tokens
-- Authentication required to:
-  - Add artifacts
-  - Like artifacts
-  - Access user dashboard
+![Project Screenshot](public/Screenshot_1.png)
 
 ---
 
-## 🔧 Tech Stack
+## 🛠 Technologies Used
 
-- **Frontend**: React.js, Tailwind CSS, DaisyUI, Axios, React Router
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB (via MongoDB Driver)
-- **Authentication**: Firebase Auth
-- **Animations**: Framer Motion, Lottie
-- **Hosting**: Vercel (Frontend), Render (or your choice for Backend)
+- React.js (Frontend UI)
+- Node.js & Express (Backend API)
+- MongoDB (Database)
+- Axios (HTTP client)
+- Firebase Authentication (User auth and protected routes)
+- Tailwind CSS (Styling)
 
 ---
 
-## 🛢️ Database
+## ✨ Core Features
 
-- **MongoDB** is used as the primary database.
-- It stores:
-  - All user-submitted artifact data
-  - User-liked artifact references
-  - Links data to authenticated Firebase user emails
+- Stylish landing page with slider/banner, featured artifact cards, and informative sections.
+- View all artifacts submitted by users on a dedicated page.
+- Authenticated users can add new artifacts with details including name, image, and description.
+- User Dashboard accessible via profile icon, showing:
+  - Artifacts created by the user (My Artifacts)
+  - Artifacts liked by the user (Liked Artifacts)
+- Interactive like system allowing users to like or unlike artifacts; liked artifacts are saved per user.
+- Firebase-based authentication with protected routes for adding artifacts, liking items, and accessing the user dashboard.
+
+---
+
+## ⚙️ Dependencies
+
+- react, react-dom
+- axios
+- firebase
+- react-router-dom
+- express
+- mongoose
+- dotenv
+- tailwindcss
 
 ---
 
 ## 🚀 How to Run Locally
 
-1. Clone the repository:
+1. **Clone the repository:**
+
    ```bash
-   git clone https://github.com/your-username/historical-artifacts-tracker.git
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+
+   ```
+
+2. **Install frontend dependencies:**
+
+- cd client
+- npm install
+
+3. **Install backend dependencies:**
+
+- cd ../server
+- npm install
+
+4. **Setup environment variables:**
+
+- Create .env files in both client and server directories.
+
+- Add your MongoDB URI, Stripe keys, Firebase config, and other sensitive data.
+
+5. **Start backend server:**
+
+- npm run dev
+
+6. **Start frontend app:**
+
+- cd ../client
+- npm start
+
+7. **Open in browser:**
+
+- Visit http://localhost:3000
+
+## 🔗 Live Project
+
+- [Live Project](https://candid-pika-b371d8.netlify.app/)
+
+## 📬 Contact
+
+- Reach me at: ik.riyad123@gmail.com
