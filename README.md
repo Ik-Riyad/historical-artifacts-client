@@ -2,8 +2,7 @@
 
 ## 🔎 Project Overview
 
-> A responsive full-stack web application that allows users to submit, browse, and interact with historical artifacts. The platform supports user authentication, personalized dashboards, and an interactive like system to engage artifact enthusiasts.
-
+> A responsive full-stack web application that allows users to explore, share, and submit historical artifacts. Users can like their favorite artifacts, which are saved in their profile for easy access. The platform supports user authentication and enables seamless artifact sharing.
 ---
 
 ## 📸 Screenshot
