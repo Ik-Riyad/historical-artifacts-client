@@ -16,7 +16,7 @@ const Home = () => {
                 <Slider />
             </section>
 
-            <section className='md:mx-15 xl:mx-64 mb-20'>
+            <section className='mx-6 xl:mx-64'>
                 <div className='text-8xl font-extrabold mt-30 mb-10 text-center text-[#3E1B0B] border-b border-[#3b1f00] w-fit mx-auto'>
                     <ScrollFloat
                         animationDuration={1}

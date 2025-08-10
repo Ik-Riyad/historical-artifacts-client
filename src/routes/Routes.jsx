@@ -13,6 +13,8 @@ import PrivateRoute from '../provider/PrivateRoute';
 import MyArtifacts from '../pages/privateArtifacts/MyArtifacts';
 import LikedArtifacts from '../pages/privateArtifacts/LikedArtifacts';
 import UpdateArtifact from '../pages/UpdateArtifact';
+import ContactUs from '../pages/Home/ContactUs';
+import AboutUs from '../pages/Home/AboutUs';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +63,14 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`https://historical-artifact-server.vercel.app/artifacts/${params.id}`),
         hydrateFallbackElement: <Loader />,
         element: <PrivateRoute> <UpdateArtifact /> </PrivateRoute>
+      },
+      {
+        path: 'contact',
+        element: <ContactUs></ContactUs>
+      },
+      {
+        path: 'about',
+        element: <AboutUs></AboutUs>
       }
     ]
   },

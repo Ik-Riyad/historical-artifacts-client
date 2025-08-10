@@ -7,14 +7,23 @@ import img05 from '../../assets/resources/gallery/gallery-05.jpg'
 import img06 from '../../assets/resources/gallery/gallery-06.jpg'
 
 import { motion } from "framer-motion";
+import ScrollFloat from '../../../Reactbits/ScrollFloat/ScrollFloat';
 
 
 const Gallery = () => {
     return (
         <div className="px-4">
             <div>
-                <h1 className="text-2xl sm:text-5xl lg:text-5xl font-extrabold mb-6 text-center text-[#3E1B0B] w-fit mx-auto">
-                    OUR GALLERY
+                <h1 className="text-2xl sm:text-5xl lg:text-5xl font-extrabold text-center text-[#3E1B0B] w-fit mx-auto">
+                    <ScrollFloat
+                        animationDuration={1}
+                        ease='back.inOut(2)'
+                        scrollStart='center bottom+=50%'
+                        scrollEnd='bottom bottom-=40%'
+                        stagger={0.03}
+                    >
+                        OUR GALLERY
+                    </ScrollFloat>
                 </h1>
 
                 <div className="border-b-1 border-[#3E1B0B] md:w-100 mx-auto mb-15 "></div>

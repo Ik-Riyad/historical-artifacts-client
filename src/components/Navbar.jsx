@@ -25,14 +25,20 @@ const Navbar = () => {
     const nav = (
         <>
             <li><NavLink to='/' className="hover:bg-transparent hover:underline ">Home</NavLink></li>
-            <li><NavLink to='/all-artifacts' className="hover:bg-transparent hover:underline ">All Artifacts</NavLink></li>
-            <li><NavLink to='/add-artifacts' className="hover:bg-transparent hover:underline">Add Artifacts</NavLink></li>
+            {
+                user && <>
+                    <li><NavLink to='/all-artifacts' className="hover:bg-transparent hover:underline ">All Artifacts</NavLink></li>
+                    <li><NavLink to='/add-artifacts' className="hover:bg-transparent hover:underline">Add Artifacts</NavLink></li>
+                </>
+            }
+            <li><NavLink to='/about' className="hover:bg-transparent hover:underline">About Us</NavLink></li>
+            <li><NavLink to='/contact' className="hover:bg-transparent hover:underline">Contact Us</NavLink></li>
         </>
     )
 
     return (
         <div className='bg-[#3E1B0B] shadow-2xl px-4 sm:px-8 lg:px-14 py-4 z-10 text-white w-full'>
-            <div className="flex items-center justify-between w-full">
+            <div className="flex items-center justify-between w-full lg:px-6">
 
                 <Link to='/' className="flex-shrink-0">
                     <img src={navLogo} alt="Logo" className='h-8 sm:h-10 lg:h-12 w-auto' />
@@ -125,11 +131,11 @@ const Navbar = () => {
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     {
-                                        user? <img
-                                        alt="Tailwind CSS Navbar component"
-                                        src={user.photoURL} /> : <img
-                                        alt="Tailwind CSS Navbar component"
-                                        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                                        user ? <img
+                                            alt="Tailwind CSS Navbar component"
+                                            src={user.photoURL} /> : <img
+                                            alt="Tailwind CSS Navbar component"
+                                            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                                     }
                                 </div>
                             </div>

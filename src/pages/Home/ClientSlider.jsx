@@ -35,7 +35,7 @@ const ClientSliders = [
 
 const ClientSlider = () => {
   return (
-    <div className="bg-[#fffaf0] py-16">
+    <div className="bg-[#fffaf0] mt-32">
       <div className="text-8xl font-bold text-center text-[#3b1f00] mb-10 border-b border-[#3b1f00] w-fit mx-auto">
         <ScrollFloat
           animationDuration={1}

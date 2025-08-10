@@ -17,7 +17,7 @@ import 'swiper/css/effect-fade';
 
 
 const Slider = () => {
-    
+
     return (
         <Swiper
             modules={[Navigation, Autoplay, EffectFade]}
@@ -54,7 +54,12 @@ const Slider = () => {
                                 direction="top"
                                 className="text-base sm:text-lg lg:text-xl leading-relaxed mb-8 opacity-90"
                             />
-                            <button className='bg-[#3E1B0B] text-white px-8 py-3 text-sm font-medium tracking-wide hover:bg-opacity-90 transition-colors'>
+                            <button
+                                className="border-2 border-[#3E1B0B] text-[#3E1B0B] rounded-lg px-6 py-3 font-medium
+                                hover:bg-[#3E1B0B] hover:text-white
+                                focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2
+                                transition-colors duration-300"
+                            >
                                 READ MORE
                             </button>
                         </div>
@@ -96,7 +101,12 @@ const Slider = () => {
                                 direction="top"
                                 className="text-base sm:text-lg lg:text-xl leading-relaxed mb-8 opacity-90"
                             />
-                            <button className='bg-[#3E1B0B] text-white px-8 py-3 text-sm font-medium tracking-wide hover:bg-opacity-90 transition-colors'>
+                            <button
+                                className="border-2 border-[#3E1B0B] text-[#3E1B0B] rounded-lg px-6 py-3 font-medium
+                                hover:bg-[#3E1B0B] hover:text-white
+                                focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2
+                                transition-colors duration-300"
+                            >
                                 READ MORE
                             </button>
                         </div>
@@ -138,7 +148,12 @@ const Slider = () => {
                                 direction="top"
                                 className="text-base sm:text-lg lg:text-xl leading-relaxed mb-8 opacity-90"
                             />
-                            <button className='bg-[#3E1B0B] text-white px-8 py-3 text-sm font-medium tracking-wide hover:bg-opacity-90 transition-colors'>
+                            <button
+                                className="border-2 border-[#3E1B0B] text-[#3E1B0B] rounded-lg px-6 py-3 font-medium
+                                hover:bg-[#3E1B0B] hover:text-white
+                                focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2
+                                transition-colors duration-300"
+                            >
                                 READ MORE
                             </button>
                         </div>

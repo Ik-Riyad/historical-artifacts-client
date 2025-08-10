@@ -8,7 +8,7 @@ const Artifacts = ({ artifactsPromise }) => {
   const [cards, setCards] = useState([]);
 
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false });
+  const isInView = useInView(sectionRef, { once: true }); // 👈 only animate once
   const controls = useAnimation();
 
   useEffect(() => {
@@ -20,16 +20,14 @@ const Artifacts = ({ artifactsPromise }) => {
   useEffect(() => {
     if (isInView) {
       controls.start("visible");
-    } else {
-      controls.start("hidden");
     }
   }, [isInView, controls]);
 
   const getVariants = (index) => ({
-    hidden: { opacity: 0, x: index % 2 === 0 ? -100 : 100 },
+    hidden: { opacity: 0, y: 100 }, // 👈 from bottom
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
         duration: 0.6,
         delay: index * 0.1,
@@ -45,26 +43,30 @@ const Artifacts = ({ artifactsPromise }) => {
       animate={controls}
     >
       <div className='grid md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10'>
-        {
-          cards.map((artifact, index) => (
-            <motion.div
-              key={artifact._id}
-              variants={getVariants(index)}
-              initial="hidden"
-              animate={controls}
-            >
-              <ArtifactsCards artifact={artifact} />
-            </motion.div>
-          ))
-        }
+        {cards.map((artifact, index) => (
+          <motion.div
+            key={artifact._id}
+            variants={getVariants(index)}
+          >
+            <ArtifactsCards artifact={artifact} />
+          </motion.div>
+        ))}
       </div>
 
-      
-        <Link to='/all-artifacts' className='my-20 flex justify-center'>
-          <button className="btn bg-[#3E1B0B] text-white px-12 py-6 hover:scale-105 transition-transform duration-300">
-            View More
+      <div className="mt-20 flex justify-center">
+        <Link to="/all-artifacts">
+          <button
+            className="border-2 border-[#3E1B0B] text-[#3E1B0B] rounded-lg shadow-md
+             hover:bg-[#3E1B0B] hover:text-white
+             focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2
+             px-8 py-4 font-semibold
+             transition-colors duration-300 flex items-center justify-center"
+          >
+            View Details
           </button>
         </Link>
+      </div>
+
     </motion.section>
   );
 };

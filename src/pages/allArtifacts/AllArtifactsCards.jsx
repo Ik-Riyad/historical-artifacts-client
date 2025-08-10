@@ -103,7 +103,15 @@ const AllArtifactsCards = ({ Artifacts }) => {
                         <span className='text-xl font-bold'> {likes} <span className='text-sm'> Likes</span></span>
                     </div>
                     <Link to={`/artifact-detail/${_id}`}>
-                        <button className="btn bg-[#3E1B0B] text-white"><IoEyeOutline />View Details</button>
+                        <button
+                            className="btn bg-[#F5F1E8] border-2 border-[#3E1B0B] text-[#3E1B0B] rounded-lg shadow-md
+                            hover:bg-[#3E1B0B] hover:text-white
+                            focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2
+                            transition-colors duration-300"
+                        >
+                            <IoEyeOutline className="inline mr-2" />
+                            View Details
+                        </button>
                     </Link>
                 </div>
             </div>
