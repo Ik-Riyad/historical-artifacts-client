@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { Outlet, useLocation, useNavigation } from 'react-router';
 import Footer from '../components/Footer';
@@ -6,7 +6,7 @@ import useAuth from '../hooks/useAuth';
 import Loader from '../components/Loader';
 
 const MainLayout = () => {
-
+    const [theme, setTheme] = useState(true)
     const { pathname } = useLocation();
 
     useEffect(() => {
@@ -25,15 +25,17 @@ const MainLayout = () => {
     }
 
     return (
+        // <div className='' data-theme={theme ? 'light' : 'dark'}>
         <>
             <section className='sticky top-0 z-50'>
-                <Navbar></Navbar>
+                <Navbar setTheme={setTheme} theme={theme}></Navbar>
             </section>
             <Outlet></Outlet>
             <section>
                 <Footer></Footer>
             </section>
         </>
+        // </div>
     );
 };
 

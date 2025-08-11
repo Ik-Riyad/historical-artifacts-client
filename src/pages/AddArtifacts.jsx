@@ -262,7 +262,10 @@ const AddArtifacts = () => {
                     {/* Submit Button */}
                     <div className="text-center pt-8">
                         <button
-                            className="px-12 py-4 bg-gradient-to-r from-amber-900 to-orange-900 text-white text-lg font-bold rounded-xl shadow-2xl hover:from-amber-800 hover:to-orange-800 transform hover:scale-105 transition-all duration-300 hover:shadow-3xl"
+                            className="px-12 py-4 border-2 border-[#3E1B0B] text-[#3E1B0B] text-lg font-bold rounded-xl shadow-md
+                            hover:bg-[#3E1B0B] hover:text-white
+                            focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2
+                            transition-colors duration-300"
                         >
                             🏺 Add Artifact
                         </button>

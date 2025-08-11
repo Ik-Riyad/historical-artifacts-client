@@ -79,17 +79,47 @@ const Login = () => {
                         <div className="card bg-white/80 w-full max-w-lg shrink-0 shadow-2xl ">
                             <div className="card-body">
                                 <h1 className='text-3xl font-bold text-center text-[#3e0b0f]'>Please Login</h1>
-                                <form onSubmit={handleLogin} className="fieldset ">
-                                    <label className="label text-[#3e0b0f]">Email</label>
-                                    <input name='email' type="email" className="input w-full" placeholder="Email" required />
-                                    <label className="label text-[#3e0b0f]">Password</label>
-                                    <div className='relative'>
-                                        <input name='password' type={passToggle ? 'text' : 'password'} className="input w-full" placeholder="Password" required />
-                                        <button type='button' onClick={() => setPassToggle(!passToggle)} className='cursor-pointer absolute right-4 top-2'>{passToggle ? <FaEye size={23} /> : <FaEyeSlash size={23} />}</button>
+                                <form onSubmit={handleLogin} className="fieldset space-y-4">
+                                    <div>
+                                        <label className="label text-black">Email</label>
+                                        <input
+                                            name="email"
+                                            type="email"
+                                            className="input w-full bg-white text-black border border-gray-300 focus:border-[#3e0b0f] focus:ring focus:ring-[#3e0b0f]/30 focus:outline-none"
+                                            placeholder="Email"
+                                            required
+                                        />
                                     </div>
-                                    <div><a className="link link-hover text-[#3e0b0f]">Forgot password?</a></div>
-                                    <button className="btn btn-neutral mt-4 bg-[#3e0b0f]">Login</button>
+
+                                    <div>
+                                        <label className="label text-black">Password</label>
+                                        <div className="relative">
+                                            <input
+                                                name="password"
+                                                type={passToggle ? "text" : "password"}
+                                                className="input w-full bg-white text-black border border-gray-300 focus:border-[#3e0b0f] focus:ring focus:ring-[#3e0b0f]/30 focus:outline-none"
+                                                placeholder="Password"
+                                                required
+                                            />
+                                            <button
+                                                type="button"
+                                                onClick={() => setPassToggle(!passToggle)}
+                                                className="cursor-pointer absolute right-4 top-2 text-[#3e0b0f]"
+                                            >
+                                                {passToggle ? <FaEye size={23} /> : <FaEyeSlash size={23} />}
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <a className="link link-hover text-[#3e0b0f]">Forgot password?</a>
+                                    </div>
+
+                                    <button className="btn mt-4 bg-[#3e0b0f] text-white w-full hover:bg-[#2a0a07]">
+                                        Login
+                                    </button>
                                 </form>
+
                                 <div className='grid grid-cols-3 items-center justify-center mt-5'>
                                     <div className='border-b border-[#3e0b0f41]'></div>
                                     <p className='textarea-md font-medium text-[#3e0b0f] mx-auto'>or Sign In with</p>

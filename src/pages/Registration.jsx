@@ -135,36 +135,66 @@ const Registration = () => {
                                 <form onSubmit={handleRegister} className="fieldset space-y-4">
                                     <div>
                                         <label className="label text-black">Name</label>
-                                        <input name='name' type="text" className="input w-full focus:border-[#3e0b0f] focus:outline-none" placeholder="Name" required />
+                                        <input
+                                            name='name'
+                                            type="text"
+                                            className="input w-full bg-white text-black border border-gray-300 focus:border-[#3e0b0f] focus:ring focus:ring-[#3e0b0f]/30 focus:outline-none"
+                                            placeholder="Name"
+                                            required
+                                        />
                                     </div>
 
                                     <div>
                                         <label className="label text-black">Email</label>
-                                        <input name='email' type="email" className="input w-full focus:border-[#3e0b0f] focus:outline-none" placeholder="Email" required />
+                                        <input
+                                            name='email'
+                                            type="email"
+                                            className="input w-full bg-white text-black border border-gray-300 focus:border-[#3e0b0f] focus:ring focus:ring-[#3e0b0f]/30 focus:outline-none"
+                                            placeholder="Email"
+                                            required
+                                        />
                                     </div>
 
                                     <div>
                                         <label className="label text-black">Image</label>
-                                        <input name='image' type="text" className="input w-full focus:border-[#3e0b0f] focus:outline-none" placeholder="Image" required />
+                                        <input
+                                            name='image'
+                                            type="text"
+                                            className="input w-full bg-white text-black border border-gray-300 focus:border-[#3e0b0f] focus:ring focus:ring-[#3e0b0f]/30 focus:outline-none"
+                                            placeholder="Image"
+                                            required
+                                        />
                                     </div>
 
                                     <div>
                                         <label className="label text-black">Password</label>
                                         <div className='relative'>
-                                            <input name='password' type={passToggle ? 'text' : 'password'} className="input w-full focus:border-[#3e0b0f] focus:outline-none" placeholder="Password" />
-                                            <button type='button' onClick={() => setPassToggle(!passToggle)} className='cursor-pointer absolute right-4 top-2'>
+                                            <input
+                                                name='password'
+                                                type={passToggle ? 'text' : 'password'}
+                                                className="input w-full bg-white text-black border border-gray-300 focus:border-[#3e0b0f] focus:ring focus:ring-[#3e0b0f]/30 focus:outline-none"
+                                                placeholder="Password"
+                                            />
+                                            <button
+                                                type='button'
+                                                onClick={() => setPassToggle(!passToggle)}
+                                                className='cursor-pointer absolute right-4 top-2 text-[#3e0b0f]'
+                                            >
                                                 {passToggle ? <FaEye size={23} /> : <FaEyeSlash size={23} />}
                                             </button>
                                         </div>
                                     </div>
 
-                                    <label className="label mt-2">
-                                        <input type="checkbox" name='terms' className="checkbox text-[#3E1B0B]" />
+                                    <label className="label mt-2 text-black">
+                                        <input type="checkbox" name='terms' className="checkbox border-[#3E1B0B] checked:bg-[#3E1B0B]" />
                                         <span className="ml-2">Accept Terms & Conditions</span>
                                     </label>
 
-                                    <button className="btn btn-neutral mt-4 bg-[#3E1B0B] w-full">Register</button>
+                                    <button className="btn mt-4 bg-[#3E1B0B] text-white hover:bg-[#2a0a07] w-full">
+                                        Register
+                                    </button>
                                 </form>
+
 
                                 {/* OR divider */}
                                 <div className='grid grid-cols-3 items-center justify-center mt-6'>
